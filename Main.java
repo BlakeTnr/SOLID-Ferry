@@ -1,6 +1,9 @@
+import Vehicles.*;
+
 class Main {
     public static void main(String[] args) {
-
-        System.out.println(String.valueOf(new LargeFerryIncome(new LargeFerryVehicles(1, 1)).getIncome()));
+        TerminalEmployeeIncome tei = new TerminalEmployeeIncome(0f, 0.1f);
+        tei.payForVehicle(new Truck(), 10);
+        System.out.println(String.valueOf(tei.getIncome()));
     }
 }
