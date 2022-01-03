@@ -1,7 +1,8 @@
+package Ferries.Vehicles;
 public class SmallFerryVehicles {
     private int space = 8;
-    int cars;
-    int vans;
+    public int cars;
+    public int vans;
 
     public SmallFerryVehicles() {
 

@@ -1,3 +1,8 @@
+package Ferries.Income;
+
+import Ferries.Vehicles.LargeFerryVehicles;
+import Vehicles.*;
+
 public class LargeFerryIncome implements FerryIncome {
     private int costOfBusses = 5;
     private int costOfTrucks = 6;
