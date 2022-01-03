@@ -10,5 +10,7 @@ public abstract class Vehicle {
         return gasLevel;
     }
 
-
+    public void setGasLevel(float newGasLevel) {
+        gasLevel = newGasLevel;
+    }
 }
