@@ -1,7 +1,12 @@
 package TerminalEmployee;
 
 public class TerminalEmployee {
-    public TerminalEmployeeIncome income = new TerminalEmployeeIncome(0f, 0.1f);
+    public TerminalEmployeeIncome income;
     public TerminalEmployeeGassing gassing = new TerminalEmployeeGassing();
-    public TerminalEmployeeLoading loading = new TerminalEmployeeLoading(gassing, income);
+    public TerminalEmployeeLoading loading;
+
+    public TerminalEmployee(TerminalEmployeeIncome income) {
+        this.income = income;
+        this.loading = new TerminalEmployeeLoading(gassing, income);
+    }
 }
