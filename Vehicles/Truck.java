@@ -1,13 +1,19 @@
 package Vehicles;
 
 import Vehicles.Parts.*;
+import Vehicles.VehicleTypes.GasVehicle;
+import Vehicles.VehicleTypes.Vehicle;
 
-public class Truck extends Vehicle implements CargoDoor, Inspectable {
+public class Truck extends Vehicle implements CargoDoor, Inspectable, GasVehicle {
+    private GasTank gasTank = new GasTank();
     private boolean isCargoDoorOpen = false;
 
     public Truck(float gasLevel) {
-        super(gasLevel);
         this.cost = 6f;
+    }
+
+    public GasTank getGasTank() {
+        return gasTank;
     }
 
     public float getCost() {
