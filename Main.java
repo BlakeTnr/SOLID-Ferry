@@ -1,14 +1,12 @@
-import TerminalEmployee.TerminalEmployeeIncome;
+import TerminalEmployee.*;
 import Vehicles.*;
 
 class Main {
     public static void main(String[] args) {
-        TerminalEmployeeIncome tei = new TerminalEmployeeIncome(0f, 0.1f);
-        Truck truck = new Truck();
-        tei.payForVehicle(truck, 10);
-        System.out.println(String.valueOf(tei.getIncome()));
-        System.out.println(String.valueOf(truck.isCargoDoorOpen()));
-        truck.setCargoDoorOpenState(true);
-        System.out.println(String.valueOf(truck.isCargoDoorOpen()));
+        TerminalEmployee tei = new TerminalEmployee();
+        Truck truck = new Truck(0.09f);
+        System.out.println(truck.gas.getGasLevel());
+        tei.loading.loadVehicle(truck);
+        System.out.println(truck.gas.getGasLevel());
     }
 }

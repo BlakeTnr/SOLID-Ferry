@@ -1,7 +1,8 @@
 package Vehicles;
 
 public class Car extends Vehicle {
-    public Car() {
+    public Car(float gasLevel) {
+        super(gasLevel);
         this.cost = 3f;
     }
 

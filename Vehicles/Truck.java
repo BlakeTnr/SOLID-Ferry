@@ -1,11 +1,12 @@
 package Vehicles;
 
-import Vehicles.Parts.CargoDoor;
+import Vehicles.Parts.*;
 
-public class Truck extends Vehicle implements CargoDoor {
+public class Truck extends Vehicle implements CargoDoor, Inspectable {
     private boolean isCargoDoorOpen = false;
-    
-    public Truck() {
+
+    public Truck(float gasLevel) {
+        super(gasLevel);
         this.cost = 6f;
     }
 
@@ -19,5 +20,9 @@ public class Truck extends Vehicle implements CargoDoor {
 
     public void setCargoDoorOpenState(boolean newCargoDoorOpenState) {
         this.isCargoDoorOpen = newCargoDoorOpenState;
+    }
+
+    public void sendForInspection() {
+        location.setLocation("Customs inspection");
     }
 }
