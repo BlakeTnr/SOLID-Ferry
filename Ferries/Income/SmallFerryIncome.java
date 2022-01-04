@@ -1,7 +1,6 @@
 package Ferries.Income;
 
 import Ferries.Vehicles.SmallFerryVehicles;
-import Vehicles.*;
 
 public class SmallFerryIncome implements FerryIncome {
     private int costOfCars = 3;
