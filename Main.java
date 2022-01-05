@@ -4,9 +4,10 @@ import Vehicles.*;
 class Main {
     public static void main(String[] args) {
         TerminalEmployee tei = new TerminalEmployee(new TerminalEmployeeIncome(0f, 0.11f));
-        Truck truck = new Truck(0.09f);
+        HybridCar hybrid = new HybridCar(0.1f, 0.1f);
         System.out.println(tei.income.getIncome());
-        tei.loading.loadVehicle(truck);
+        tei.loading.loadVehicle(hybrid);
         System.out.println(tei.income.getIncome());
+        System.out.println(hybrid.location.getLocation());
     }
 }

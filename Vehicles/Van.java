@@ -10,6 +10,16 @@ public class Van extends Vehicle implements CargoDoor, Inspectable, GasVehicle {
 
     public Van(float gasLevel) {
         this.cost = 4f;
+        gasTank.setGasLevel(gasLevel);
+    }
+
+    public boolean needsRefuelling() {
+        return gasTank.getGasLevel() < 0.1f;
+    }
+
+    public void refuel() {
+        location.setLocation("Gas station");
+        gasTank.setGasLevel(1f);
     }
 
     public GasTank getGasTank() {

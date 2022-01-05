@@ -10,6 +10,16 @@ public class Truck extends Vehicle implements CargoDoor, Inspectable, GasVehicle
 
     public Truck(float gasLevel) {
         this.cost = 6f;
+        gasTank.setGasLevel(gasLevel);
+    }
+
+    public boolean needsRefuelling() {
+        return gasTank.getGasLevel() < 0.1f;
+    }
+
+    public void refuel() {
+        location.setLocation("Gas station");
+        gasTank.setGasLevel(1f);
     }
 
     public GasTank getGasTank() {
