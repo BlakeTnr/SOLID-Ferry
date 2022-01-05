@@ -2,7 +2,7 @@ package TerminalEmployee;
 
 public class TerminalEmployee {
     public TerminalEmployeeIncome income;
-    public TerminalEmployeeGassing gassing = new TerminalEmployeeGassing();
+    public TerminalEmployeeRefueling gassing = new TerminalEmployeeRefueling();
     public TerminalEmployeeLoading loading;
 
     public TerminalEmployee(TerminalEmployeeIncome income) {

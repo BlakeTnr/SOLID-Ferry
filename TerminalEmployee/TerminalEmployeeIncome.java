@@ -1,9 +1,10 @@
 package TerminalEmployee;
-import Vehicles.Vehicle;
+
+import Vehicles.VehicleTypes.Vehicle;
 
 public class TerminalEmployeeIncome {
-    private float income;   
-    private float percentIncome; 
+    private float income;
+    private float percentIncome;
 
     public TerminalEmployeeIncome(float startingIncome, float percentIncomeAsDecimal) {
         this.income = startingIncome;

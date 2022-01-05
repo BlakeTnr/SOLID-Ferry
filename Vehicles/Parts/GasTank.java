@@ -1,7 +1,7 @@
 package Vehicles.Parts;
 
-public class Gas {
-    private float gasLevel = 100f;
+public class GasTank {
+    private float gasLevel = 1f;
 
     public float getGasLevel() {
         return gasLevel;
