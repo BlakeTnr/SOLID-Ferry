@@ -21,6 +21,8 @@ public class TerminalEmployeeLoading {
     private void setVehicleFerryLocation(Vehicle vehicle) { // May violate SRP
         if (vehicle instanceof Truck || vehicle instanceof Bus) {
             vehicle.location.setLocation("Large ferry");
+        } else if (vehicle instanceof HybridCar || vehicle instanceof ElectricCar) {
+            vehicle.location.setLocation("Electric car ferry");
         } else {
             vehicle.location.setLocation("Small ferry");
         }
